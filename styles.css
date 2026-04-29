@@ -251,6 +251,22 @@ input:focus, select:focus {
     text-decoration: underline;
 }
 
+.cancelar-btn {
+    margin-left: 10px;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cancelar-btn:hover {
+    background: #e55050;
+}
+
 .actions {
     display: flex;
     gap: 12px;
