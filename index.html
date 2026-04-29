@@ -92,13 +92,10 @@
             <div class="filters">
                 <select>
                     <option>Especialidad</option>
-                    <option>Clínica</option>
-                    <option>Pediatría</option>
                 </select>
 
                 <select>
                     <option>Médico</option>
-                    <option>Dr. Pérez</option>
                 </select>
 
                 <input type="date">
@@ -109,6 +106,10 @@
                 <div class="slot">10:30</div>
                 <div class="slot">11:00</div>
                 <div class="slot disabled">11:30</div>
+                <div class="slot">12:00</div>
+                <div class="slot">12:30</div>
+                <div class="slot">13:00</div>
+                <div class="slot">13:30</div>
             </div>
 
             <button class="primary full" data-target="confirmacion">
@@ -119,8 +120,8 @@
         <section id="confirmacion" class="card confirmation hidden">
             <h2>Confirmar turno</h2>
 
-            <p><strong>Médico:</strong> Dr. Pérez</p>
-            <p><strong>Fecha:</strong> 10/05 - 10:00</p>
+            <p><strong>Médico:</strong> -</p>
+            <p><strong>Fecha:</strong> -</p>
 
             <div class="actions">
                 <button class="primary">Confirmar</button>
@@ -132,9 +133,6 @@
             <h2>Mis turnos</h2>
 
             <ul class="list">
-                <li>10/05 - Clínica</li>
-                <li>15/05 - Odontología</li>
-                <li>20/05 - Pediatría</li>
             </ul>
         </section>
 
@@ -143,10 +141,13 @@
 
             <form class="form">
                 <label>Nombre</label>
-                <input type="text" value="Juan Pérez">
+                <input type="text" placeholder="Tu nombre">
 
                 <label>Email</label>
-                <input type="email" value="juan@email.com">
+                <input type="email" placeholder="Tu email">
+
+                <label>Teléfono</label>
+                <input type="tel" placeholder="Tu teléfono">
 
                 <button class="primary full">Guardar cambios</button>
             </form>
