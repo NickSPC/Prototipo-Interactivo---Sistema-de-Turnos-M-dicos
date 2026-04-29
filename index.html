@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Turnos Médicos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2 class="logo">Salud+</h2>
+
+        <nav class="menu">
+            <button data-target="reserva">Reservar turno</button>
+            <button data-target="historial">Mis turnos</button>
+            <button data-target="perfil">Perfil</button>
+            <button class="logout" data-target="inicio">Cerrar sesión</button>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <section id="inicio" class="card hero">
+            <h1>Bienvenido a Salud+</h1>
+            <p>Gestioná tus turnos médicos de forma rápida, segura y sin filas.</p>
+
+            <div class="actions">
+                <button class="primary" data-target="login">Iniciar sesión</button>
+                <button class="secondary" data-target="registro">Registrarse</button>
+            </div>
+        </section>
+
+        <section id="registro" class="card hidden">
+            <h2>Crear cuenta</h2>
+
+            <form class="form-grid">
+                <div>
+                    <label>Nombre completo</label>
+                    <input type="text" placeholder="Ej: Juan Pérez">
+                </div>
+
+                <div>
+                    <label>DNI</label>
+                    <input type="text" placeholder="Ej: 12345678">
+                </div>
+
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="correo@email.com">
+                </div>
+
+                <div>
+                    <label>Teléfono</label>
+                    <input type="tel" placeholder="Ej: 2611234567">
+                </div>
+
+                <div>
+                    <label>Contraseña</label>
+                    <input type="password">
+                </div>
+
+                <div>
+                    <label>Confirmar contraseña</label>
+                    <input type="password">
+                </div>
+
+                <button class="primary full" data-target="reserva">Crear cuenta</button>
+            </form>
+        </section>
+
+        <section id="login" class="card hidden">
+            <h2>Iniciar sesión</h2>
+
+            <form class="form">
+                <label>Email</label>
+                <input type="email" placeholder="correo@email.com">
+
+                <label>Contraseña</label>
+                <input type="password">
+
+                <button class="primary full" data-target="reserva">Ingresar</button>
+
+                <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+            </form>
+        </section>
+
+        <section id="reserva" class="card hidden">
+            <h2>Reservar turno</h2>
+
+            <div class="filters">
+                <select>
+                    <option>Especialidad</option>
+                    <option>Clínica</option>
+                    <option>Pediatría</option>
+                </select>
+
+                <select>
+                    <option>Médico</option>
+                    <option>Dr. Pérez</option>
+                </select>
+
+                <input type="date">
+            </div>
+
+            <div class="calendar">
+                <div class="slot">10:00</div>
+                <div class="slot">10:30</div>
+                <div class="slot">11:00</div>
+                <div class="slot disabled">11:30</div>
+            </div>
+
+            <button class="primary full" data-target="confirmacion">
+                Reservar turno
+            </button>
+        </section>
+
+        <section id="confirmacion" class="card confirmation hidden">
+            <h2>Confirmar turno</h2>
+
+            <p><strong>Médico:</strong> Dr. Pérez</p>
+            <p><strong>Fecha:</strong> 10/05 - 10:00</p>
+
+            <div class="actions">
+                <button class="primary">Confirmar</button>
+                <button class="secondary" data-target="reserva">Cancelar</button>
+            </div>
+        </section>
+
+        <section id="historial" class="card hidden">
+            <h2>Mis turnos</h2>
+
+            <ul class="list">
+                <li>10/05 - Clínica</li>
+                <li>15/05 - Odontología</li>
+                <li>20/05 - Pediatría</li>
+            </ul>
+        </section>
+
+        <section id="perfil" class="card hidden">
+            <h2>Mi perfil</h2>
+
+            <form class="form">
+                <label>Nombre</label>
+                <input type="text" value="Juan Pérez">
+
+                <label>Email</label>
+                <input type="email" value="juan@email.com">
+
+                <button class="primary full">Guardar cambios</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
